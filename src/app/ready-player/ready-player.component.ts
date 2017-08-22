@@ -10,10 +10,12 @@ export class ReadyPlayerComponent implements OnInit {
   @Output() onSubmitClickSender = new EventEmitter();
 
   journeyBegun = false;
+  characterCreated = false;
 
   onSubmit(name: string, age: number, faction: string) {
     var newPlayer = new Player(name, age, faction);
     this.onSubmitClickSender.emit(newPlayer);
+    this.characterCreated = true;
   }
 
   beginJourney() {
