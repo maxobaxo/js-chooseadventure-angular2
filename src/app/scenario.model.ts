@@ -1,3 +1,3 @@
 export class Scenario {
-  constructor(public name: string, public context: string, public question: string, public options: string[]) {}
+  constructor(public context: string, public question: string, public options: string[], public id: number) {}
 }
