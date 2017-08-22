@@ -12,9 +12,7 @@ export class AppComponent {
 
   createCurrentPlayer(newPlayer) {
     this.currentPlayer = newPlayer;
-    console.log(this.currentPlayer);
     this.characterCreated = true;
   }
 
-  title = 'app works!';
 }

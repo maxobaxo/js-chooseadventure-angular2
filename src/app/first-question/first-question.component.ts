@@ -9,6 +9,20 @@ import { Player } from '../player.model';
 export class FirstQuestionComponent implements OnInit {
   @Input() childCurrentPlayer: Player;
 
+  chosenWeapon = null;
+
+  chooseSword() {
+    this.childCurrentPlayer.weapon = "godsword";
+  }
+
+  chooseWatch() {
+    this.childCurrentPlayer.weapon = "watch";
+  }
+
+  chooseKnife() {
+    this.childCurrentPlayer.weapon = "knife";
+  }
+
   constructor() { }
 
   ngOnInit() {
