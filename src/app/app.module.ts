@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ReadyPlayerComponent } from './ready-player/ready-player.component';
+import { FirstQuestionComponent } from './first-question/first-question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReadyPlayerComponent
+    ReadyPlayerComponent,
+    FirstQuestionComponent
   ],
   imports: [
     BrowserModule,

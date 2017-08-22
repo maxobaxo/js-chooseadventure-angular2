@@ -8,9 +8,13 @@ import { Player } from './player.model';
 })
 export class AppComponent {
   currentPlayer: Player = null;
+  characterCreated = false;
+
   createCurrentPlayer(newPlayer) {
     this.currentPlayer = newPlayer;
     console.log(this.currentPlayer);
+    this.characterCreated = true;
   }
+
   title = 'app works!';
 }

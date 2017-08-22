@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Player } from '../player.model';
 
 @Component({
@@ -7,15 +7,15 @@ import { Player } from '../player.model';
   styleUrls: ['./ready-player.component.css']
 })
 export class ReadyPlayerComponent implements OnInit {
+  @Input() childCharacterCreated: boolean;
   @Output() onSubmitClickSender = new EventEmitter();
 
   journeyBegun = false;
-  characterCreated = false;
 
   onSubmit(name: string, age: number, faction: string) {
     var newPlayer = new Player(name, age, faction);
     this.onSubmitClickSender.emit(newPlayer);
-    this.characterCreated = true;
+    this.childCharacterCreated = true;
   }
 
   beginJourney() {

@@ -1,3 +1,7 @@
 <div class="container">
-  <app-ready-player (onSubmitClickSender)="createCurrentPlayer($event)"></app-ready-player>
+  <app-ready-player [childCharacterCreated]="characterCreated" (onSubmitClickSender)="createCurrentPlayer($event)"></app-ready-player>
+
+  <div *ngIf="characterCreated===true">
+    <app-first-question [childCurrentPlayer]="currentPlayer" ></app-first-question>
+  </div>
 </div>
