@@ -4,19 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { routing } from './app.routing';
 import { ReadyPlayerComponent } from './ready-player/ready-player.component';
 import { FirstQuestionComponent } from './first-question/first-question.component';
+import { ScenarioDetailComponent } from './scenario-detail/scenario-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadyPlayerComponent,
-    FirstQuestionComponent
+    FirstQuestionComponent,
+    ScenarioDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
